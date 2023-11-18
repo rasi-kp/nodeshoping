@@ -1,0 +1,25 @@
+<div class="container-fluid justify-content-center align-items-center">
+  <div class="d-flex justify-content-between bg-light p-3">
+    <!-- Contact Information -->
+    <div class="d-flex ">
+      <h5 class="mr-3">Hi {{username}}</h5>
+    </div>
+
+    <!-- Social Media Links and Greeting -->
+    <div class="d-flex align-items-center">
+      <a href="/home" class="btn btn-primary mr-3">Home</a>
+      <a href="/logout" onclick="logout()" class="btn btn-primary">Log Out</a>
+    </div>
+  </div>
+
+</div>
+<h1>Ordered items are</h1>
+<script>
+    async function logout() {
+      try {
+        alert(" Successfully logged out! ");
+      } catch (error) {
+        console.error('Logout failed:', error);
+      }
+    }
+  </script>

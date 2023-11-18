@@ -1,0 +1,25 @@
+body {
+  background: url('https://png.pngtree.com/thumb_back/fh260/back_our/20190619/ourmid/pngtree-shopping-mall-supermarket-selection-merchandise-poster-background-material-image_133225.jpg') no-repeat center fixed;
+  background-size: cover;
+}
+a {
+  color: #00B7FF;
+}
+h1{
+text-align: center;
+}
+.color{
+  background-color: aqua;
+  padding: 5px;
+  font-size: large;
+}
+.gradient-custom {
+  /* fallback for old browsers */
+  background: #6a11cb;
+  
+  /* Chrome 10-25, Safari 5.1-6 */
+  background: -webkit-linear-gradient(to right, rgb(140, 63, 223), rgb(37, 37, 252));
+  
+  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: linear-gradient(to right, rgb(140, 59, 228),rgb(109, 213, 254), rgba(37, 117, 252, 1))
+  }

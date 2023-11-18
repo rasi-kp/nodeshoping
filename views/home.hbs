@@ -1,0 +1,68 @@
+<div class="container-fluid justify-content-center align-items-center">
+  <div class="d-flex justify-content-between bg-blue p-3">
+    <!-- Contact Information -->
+    <div class="d-flex ">
+      <h5 class="mr-3">Hi {{username}}</h5>
+    </div>
+
+    <!-- Social Media Links and Greeting -->
+    <div class="d-flex align-items-center">
+      <a href="/order" class="btn btn-primary mr-3">Orders</a>
+      <a href="/logout" onclick="logout()" class="btn btn-primary">Log Out</a>
+    </div>
+  </div>
+  <h3 class="align-items-center text-center mt-2">Welcome !!!!!!!</h3>
+
+</div>
+<div class="container-fluid justify-content-center align-items-center m-4 mt-5">
+  <div class=" row mr-5">
+    {{#each items}}
+    <div class="col-sm-6 col-md-4 col-lg-3">
+      <div class="card mb-3" style=" background-color: rgba(232, 244, 232, 0.708);">
+        <img src="{{this.image_url}}" class="card-img-top" style="height: 280px;"
+          alt="...">
+        <div class="card-body m-0">
+          <h5 class="card-title">{{this.name}}</h5>
+          <p>More</p>
+          <p class="w-100 hidden-content" style="display: none;">{{this.description}}</p>
+          <a href="#" class="btn btn-sucess">
+  <span class="font-weight-bold text-primary">Price: {{this.price}} Rs</span>
+</a>
+          {{!-- <a href="#" class="btn btn-primary text-right">Add to Card</a> --}}
+          <div class="d-flex justify-content-end">
+            <a href="#" onclick="addcard()" class="btn btn-success">Add to Cart</a>
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    {{/each}}
+  </div>
+</div>
+
+<script type="text/javascript">
+    window.history.forward();
+    function noBack() {
+        window.history.forward();
+    } 
+</script>
+<script>
+    async function logout() {
+      try {
+        alert(" Successfully logged out! ");
+      } catch (error) {
+        console.error('Logout failed:', error);
+      }
+    }
+    function addcard(){
+      alert("Sucessfully added to card")
+    }
+  </script>
+  <script>
+  $(document).ready(function () {
+    $('.card-body').on('click', function () {
+      $(this).find('.hidden-content').toggle();
+    });
+  });
+</script>

@@ -1,0 +1,21 @@
+<div class="container justify-content-center">
+    <h1>Dummy Data Table</h1>
+    <table class="col col-sm-12 table color ">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each data}}
+            <tr>
+                <td>{{id}}</td>
+                <td>{{name}}</td>
+                <td>{{age}}</td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
